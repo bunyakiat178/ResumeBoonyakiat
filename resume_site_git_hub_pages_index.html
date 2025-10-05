@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume • Programmer / Full‑stack Developer</title>
+  <meta name="description" content="Resume & project portfolio for a Programmer / Full‑stack Developer specializing in ASP.NET Core, Nuxt3, Vue3, Bootstrap, PrimeVue, Tailwind CSS." />
+  <meta name="author" content="Your Name" />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #0b1020;          /* deep navy */
+      --card: #0f172a;        /* slate-900 */
+      --soft: #111827;        /* gray-900 */
+      --text: #e5e7eb;        /* gray-200 */
+      --muted: #9ca3af;       /* gray-400 */
+      --brand: #38bdf8;       /* sky-400 */
+      --accent: #22d3ee;      /* cyan-400 */
+      --ok: #34d399;          /* emerald-400 */
+      --warn: #f59e0b;        /* amber-500 */
+      --shadow: 0 8px 30px rgba(0,0,0,.25);
+      --radius: 18px;
+      --gap: 18px;
+      --pad: 22px;
+      --max: 980px;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body{
+      margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 600px at 80% -10%, rgba(34,211,238,.12), transparent 60%),
+                  radial-gradient(800px 400px at 10% 0%, rgba(56,189,248,.12), transparent 60%),
+                  var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+    }
+    a { color: var(--brand); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: var(--max); margin: 0 auto; padding: 28px 20px 80px; }
+    header { display:flex; flex-wrap:wrap; gap: var(--gap); align-items:center; justify-content:space-between; margin-bottom: 22px; }
+    .brand { display:flex; align-items:center; gap:12px; }
+    .avatar { width:56px; height:56px; border-radius: 14px; background: linear-gradient(135deg,var(--brand),var(--accent)); display:grid; place-items:center; color:#001018; font-weight:800; }
+    .title { line-height:1.1; }
+    .title h1 { font-size: clamp(22px, 3vw, 30px); margin:0; font-weight:700; }
+    .title p { margin:6px 0 0; color: var(--muted); font-size: 14px; }
+    nav { display:flex; gap: 10px; flex-wrap:wrap; }
+    .btn{ background: var(--soft); color: var(--text); padding:10px 14px; border-radius: 12px; border:1px solid #1f2937; box-shadow: var(--shadow); display:inline-flex; align-items:center; gap:8px; font-weight:600; }
+    .btn.secondary{ background: transparent; border-color:#374151; }
+    .grid{ display:grid; grid-template-columns: 1fr; gap: var(--gap); }
+    @media (min-width: 900px){ .grid{ grid-template-columns: 1.1fr .9fr; } }
+    .card{ background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01));
+           border:1px solid #1f2937; border-radius: var(--radius); box-shadow: var(--shadow); padding: var(--pad); }
+    h2{ font-size: 16px; letter-spacing:.3px; text-transform: uppercase; color:#c0d2ff; margin:0 0 14px; }
+    h3{ font-size: 15px; margin: 0 0 6px; }
+    .meta{ color: var(--muted); font-size: 13px; }
+    .badge{ display:inline-block; padding:6px 10px; background:#0b1222; border:1px solid #1f2937; border-radius: 999px; color:#d1d5db; font-size:12px; }
+    ul { margin:10px 0 0 20px; padding:0; }
+    li { margin: 6px 0; }
+    .skills{ display:flex; flex-wrap: wrap; gap:8px; }
+    .section + .section { margin-top: 14px; }
+    footer{ margin-top: 28px; color:var(--muted); font-size:12px; text-align:center; }
+    /* print */
+    @media print { body{ background:white; color:#111827; } .card{ box-shadow:none; background:white; border-color:#e5e7eb; } .btn, nav{ display:none; } a{ color:#2563eb; } }
+  </style>
+  <!-- Schema.org: Person -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Your Name",
+    "jobTitle":"Programmer / Full‑stack Developer",
+    "worksFor": {"@type":"Organization","name":"Seniorsoft Development Co., Ltd."},
+    "url":"https://your-github-username.github.io/",
+    "sameAs":["https://www.linkedin.com/in/your-linkedin/","https://github.com/your-github-username"]
+  }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="avatar">PD</div>
+        <div class="title">
+          <h1>Your Name</h1>
+          <p>Programmer / Full‑stack Developer • ASP.NET Core, Nuxt3, Vue3, Bootstrap, Tailwind CSS</p>
+        </div>
+      </div>
+      <nav>
+        <a class="btn" href="#projects">Projects</a>
+        <a class="btn secondary" href="#skills">Skills</a>
+        <button class="btn" onclick="window.print()">Download PDF</button>
+      </nav>
+    </header>
+
+    <div class="grid">
+      <!-- LEFT: Experience & Projects -->
+      <section class="card">
+        <h2>Experience</h2>
+        <div class="section">
+          <h3>Programmer — Seniorsoft Development Co., Ltd.</h3>
+          <div class="meta">June 2022 – Present · Bangkok, Thailand</div>
+          <ul>
+            <li>Develop & maintain enterprise apps with <strong>ASP.NET Core (MVC/API)</strong>.</li>
+            <li>Build responsive interfaces with <strong>Nuxt3, Vue3</strong>, Bootstrap, PrimeVue, Tailwind CSS.</li>
+            <li>Write clean C# / TypeScript code with testing (Unit & Integration) and code reviews.</li>
+            <li>Deploy on <strong>Google Cloud Platform</strong> (Ubuntu VM, Firewall, hosting).</li>
+            <li>Use <strong>GA4</strong> & basic SEO for traffic measurement and on‑page optimization.</li>
+            <li>Collaborate via <strong>Jira/Trello</strong> and <strong>Git</strong>.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- RIGHT: Contact & Summary -->
+      <aside class="card">
+        <h2>Contact</h2>
+        <div class="section">
+          <p><strong>Location:</strong> Bangkok, Thailand</p>
+          <p><strong>Email:</strong> your.email@example.com</p>
+          <p><strong>GitHub:</strong> <a href="https://github.com/your-github-username">github.com/your-github-username</a></p>
+          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/your-linkedin/">linkedin.com/in/your-linkedin</a></p>
+        </div>
+        <div class="section">
+          <h2>Summary</h2>
+          <p>Programmer with hands‑on experience in enterprise systems, modern front‑ends, and .NET back‑ends. Comfortable shipping features end‑to‑end, improving performance, and collaborating in agile teams.</p>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Projects -->
+    <section id="projects" class="card" style="margin-top: var(--gap);">
+      <h2>Projects & Responsibilities</h2>
+
+      <div class="section">
+        <h3>BalueSea System <span class="badge">Back‑office</span></h3>
+        <div class="meta">Full‑stack · ASP.NET Core MVC/API, C#, LINQ, Bootstrap 4, jQuery, Jira/Trello</div>
+        <ul>
+          <li>Gathered requirements, designed wireframes/mockups, built MVC front‑end and API back‑end.</li>
+          <li>Implemented Unit & Integration testing; tracked metrics and progress via spreadsheets.</li>
+          <li>Collected feedback and iterated for performance and UX improvements.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>Giftory Premium System <span class="badge">Rewards · LINE OA</span></h3>
+        <div class="meta">Front‑end · HTML, CSS, JS, jQuery, Bootstrap 4, Jira/Trello</div>
+        <ul>
+          <li>Designed front‑end structure based on provided UI to support reward points features.</li>
+          <li>Managed workflows and delivery milestones using Jira/Trello.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>MyMenu System <span class="badge">QR Ordering</span></h3>
+        <div class="meta">Front‑end · Bootstrap 4, jQuery, Trello, Git</div>
+        <ul>
+          <li>Built responsive layouts for PC & tablet; streamlined ordering UX in restaurant context.</li>
+          <li>Managed tasks and source control with Trello & Git.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>myMaxx2 System <span class="badge">Invoicing & Orders</span></h3>
+        <div class="meta">Front‑end · Bootstrap 4, jQuery, Jira, Git</div>
+        <ul>
+          <li>Developed mobile/tablet‑optimized UI components for invoicing and order flows.</li>
+          <li>Tracked progress in Jira and maintained code in Git repositories.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>Line Report System <span class="badge">Monitoring · LINE OA</span></h3>
+        <div class="meta">Front‑end · Bootstrap 4, jQuery, Jira/Trello, Git</div>
+        <ul>
+          <li>Designed web interfaces for real‑time reporting integrated with LINE OA.</li>
+          <li>Handled milestones and code management with Jira/Trello & Git.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>Pasta 2 System <span class="badge">Restaurant</span></h3>
+        <div class="meta">Front‑end · Bootstrap 4, jQuery, Jira/Trello, Git</div>
+        <ul>
+          <li>Developed mobile‑first UI to support restaurant operations and quick actions.</li>
+          <li>Maintained version control and deployment consistency with Git.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="card" style="margin-top: var(--gap);">
+      <h2>Technical Skills</h2>
+      <div class="section">
+        <strong>Frameworks:</strong>
+        <div class="skills">
+          <span class="badge">ASP.NET Core (MVC/API)</span>
+          <span class="badge">Nuxt3</span>
+          <span class="badge">Vue3</span>
+          <span class="badge">PrimeVue</span>
+          <span class="badge">Tailwind CSS</span>
+          <span class="badge">Bootstrap 4</span>
+        </div>
+      </div>
+      <div class="section">
+        <strong>Languages:</strong>
+        <div class="skills">
+          <span class="badge">C#</span>
+          <span class="badge">HTML</span>
+          <span class="badge">CSS</span>
+          <span class="badge">JavaScript</span>
+          <span class="badge">TypeScript</span>
+          <span class="badge">jQuery</span>
+          <span class="badge">LINQ</span>
+        </div>
+      </div>
+      <div class="section">
+        <strong>DevOps & Tools:</strong>
+        <div class="skills">
+          <span class="badge">Git</span>
+          <span class="badge">Jira</span>
+          <span class="badge">Trello</span>
+          <span class="badge">Ubuntu CLI</span>
+          <span class="badge">Bash</span>
+          <span class="badge">Google Cloud Platform</span>
+          <span class="badge">Google Analytics (GA4)</span>
+          <span class="badge">Basic SEO</span>
+        </div>
+      </div>
+      <div class="section">
+        <strong>Learning:</strong>
+        <div class="skills">
+          <span class="badge">Nuxt3.js</span>
+          <span class="badge">PrimeVue</span>
+          <span class="badge">Tailwind CSS</span>
+          <span class="badge">.NET Core Web API</span>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Your Name — Built for GitHub Pages
+    </footer>
+  </div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
