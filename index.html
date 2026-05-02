@@ -3,298 +3,164 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bunyakiat Suksamrong • Resume</title>
-  <meta name="description" content="Resume & project portfolio for Bunyakiat Suksamrong — Programmer: ASP.NET Core, Nuxt3, Vue3, Bootstrap, Tailwind CSS." />
-  <meta name="author" content="Bunyakiat Suksamrong" />
-  <meta name="theme-color" content="#93DEFF" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Bunyakiat Portfolio</title>
+
   <style>
-    /* ===== Minimal Light Theme (Readable & Print‑friendly) ===== */
-    :root{
-      --bg:#F7F7F7;          /* background */
-      --surface:#ffffff;      /* cards */
-      --line:#60647022;       /* subtle border (alpha of #606470) */
-      --text:#323643;         /* primary text */
-      --muted:#606470;        /* secondary text */
-      --accent:#93DEFF;       /* links & accents */
-      --accent-ink:#323643;   /* button text */
-      --radius:14px;
-      --pad:22px;
-      --gap:18px;
-      --shadow:0 6px 20px rgba(50,54,67,.08);
-      --max: 1080px;
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f7f7f7;
+      color: #333;
     }
-
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial;
-      background: var(--bg); color: var(--text);
-      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
     }
-    a{color:var(--accent); text-decoration:none}
-    a:hover{text-decoration:underline}
-
-    .container{max-width:var(--max); margin:0 auto; padding:28px 20px 80px}
-
-    header{display:flex; flex-wrap:wrap; gap:14px; align-items:center; justify-content:space-between; margin-bottom:16px}
-    .brand{display:flex; align-items:center; gap:14px}
-    .avatar{width:56px; height:56px; border-radius:12px; background:var(--accent); color:#fff; display:grid; place-items:center; font-weight:800}
-    .title h1{font-size:clamp(24px,3.2vw,32px); margin:0 0 4px 0; font-weight:700; letter-spacing:.2px}
-    .title p{margin:0; color:var(--muted)}
-
-    nav{display:flex; gap:8px; flex-wrap:wrap}
-    .btn{background:#ffffff; color:var(--accent-ink); padding:10px 14px; border-radius:10px; border:1px solid var(--line); box-shadow:var(--shadow); font-weight:600}
-    .btn.secondary{background:transparent}
-
-    /* layout */
-    .grid{display:grid; grid-template-columns:1fr; gap:var(--gap)}
-    @media (min-width: 980px){ .grid{ grid-template-columns: 1.1fr .9fr; } }
-
-    /* card */
-    .card{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:var(--pad); box-shadow:var(--shadow)}
-
-    /* headings */
-    h2{font-size:15px; text-transform:uppercase; letter-spacing:.3px; color:var(--accent-ink); margin:0 0 12px}
-    h3{font-size:16px; margin:0 0 6px; font-weight:700}
-    .meta{color:var(--muted); font-size:13px}
-
-    ul{margin:10px 0 0 20px; padding:0}
-    li{margin:6px 0}
-
-    .section + .section{margin-top:14px}
-
-    .badge{display:inline-block; padding:6px 10px; background:#F7F7F7; color:#323643; border:1px solid #93DEFF; border-radius:999px; font-size:12px}
-
-    .skills{display:flex; flex-wrap:wrap; gap:8px}
-
-    footer{margin-top:28px; color:var(--muted); font-size:12px; text-align:center}
-
-    /* print */
-    @media print{
-      body{background:#fff}
-      .btn, nav{display:none}
-      .card{box-shadow:none}
-      a{color:#1f2937; text-decoration:none}
+    .card {
+      background: white;
+      padding: 20px;
+      margin-bottom: 16px;
+      border-radius: 10px;
+    }
+    h1,h2 {
+      margin-top: 0;
+    }
+    .lang-btn {
+      margin-right: 10px;
+      padding: 6px 12px;
+      cursor: pointer;
+      border: none;
+      border-radius: 6px;
+    }
+    .active {
+      background: #333;
+      color: white;
+    }
+    .project {
+      border-left: 4px solid #4db8ff;
+      padding-left: 12px;
+      margin-top: 12px;
     }
   </style>
-  <!-- Schema.org: Person -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Person",
-    "name":"Bunyakiat Suksamrong",
-    "jobTitle":"Programmer",
-    "worksFor": {"@type":"Organization","name":"Seniorsoft Development Co., Ltd."},
-    "url":"https://bunyakiat178.github.io/ResumeBunyakiat/",
-    "sameAs":["https://github.com/bunyakiat178"]
-  }
-  </script>
 </head>
+
 <body>
-  <div class="container">
-    <header>
-      <div class="brand">
-        <div class="avatar">BS</div>
-        <div class="title">
-          <h1>Bunyakiat Suksamrong</h1>
-          <p>Programmer • ASP.NET Core, Nuxt3/Vue3, Bootstrap, Tailwind CSS</p>
-        </div>
-      </div>
-      <nav>
-        <a class="btn" href="#projects">Projects</a>
-        <a class="btn secondary" href="#skills">Skills</a>
-        <button class="btn" onclick="window.print()">Download PDF</button>
-      </nav>
-    </header>
+<div class="container">
 
-    <!-- HERO SUMMARY -->
-    <section class="card" style="display:grid;gap:10px;align-items:center;">
-      <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap;">
-        <div class="avatar" style="width:64px;height:64px;border-radius:14px;background:#323643">BS</div>
-        <div>
-          <h2 style="margin:0;text-transform:none">Professional Summary</h2>
-          <p style="margin:6px 0 0;color:var(--muted)">Programmer with experience in enterprise web systems using ASP.NET Core (MVC/API) and modern front‑end stacks (Nuxt3/Vue3). Strong in UI implementation, API integration, and agile collaboration. Seeking roles in SA, Full‑stack, or Front‑end.</p>
-        </div>
-      </div>
-      <p style="margin:4px 0 0;color:var(--muted)">Bangkok • Ready within 1 month • Expected 60k THB</p>
-      <div style="display:flex;gap:8px;flex-wrap:wrap;">
-        <a class="btn" href="mailto:bunyakiatsuksamrong@gmail.com">Email</a>
-        <a class="btn secondary" href="tel:+66952166600">Call</a>
-        <a class="btn secondary" href="https://github.com/bunyakiat178" target="_blank">GitHub</a>
-      </div>
-    </section>
-
-    <div class="grid">
-      <!-- LEFT: Experience & Projects -->
-      <section class="card">
-        <h2>Experience</h2>
-        <div class="section">
-          <h3>Programmer — Seniorsoft Development Co., Ltd.</h3>
-          <div class="meta">June 2022 – Present · Bangkok, Thailand</div>
-          <ul>
-            <li>Develop & maintain enterprise apps with <strong>ASP.NET Core (MVC/API)</strong>.</li>
-            <li>Build responsive interfaces with <strong>Nuxt3, Vue3</strong>, Bootstrap, PrimeVue, Tailwind CSS.</li>
-            <li>Write clean C# / TypeScript with Unit & Integration testing.</li>
-            <li>Deploy and host on <strong>Google Cloud Platform</strong> (Ubuntu VM, Firewall).</li>
-            <li>Use <strong>GA4</strong> & basic SEO for traffic measurement and on‑page optimization.</li>
-            <li>Collaborate via <strong>Jira/Trello</strong> and manage source with <strong>Git</strong>.</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- RIGHT: Contact & Sidebar -->
-      <aside class="card">
-        <h2>Contact</h2>
-        <div class="section">
-          <p><strong>Location:</strong> 792/44 The Excel Groove, Lasalle, Building A, Soi Sukhumvit 105, Bangna Tai, Bangna, Bangkok 10260</p>
-          <p><strong>Email:</strong> <a href="mailto:bunyakiatsuksamrong@gmail.com">bunyakiatsuksamrong@gmail.com</a></p>
-          <p><strong>Phone:</strong> 095-2166-600</p>
-          <p><strong>GitHub:</strong> <a href="https://github.com/bunyakiat178">github.com/bunyakiat178</a></p>
-          <p><strong>Line ID:</strong> sukseek</p>
-        </div>
-        <div class="section">
-          <h2>Personal Info</h2>
-          <p><strong>Nationality:</strong> Thai &nbsp;•&nbsp; <strong>Religion:</strong> Buddhist</p>
-          <p><strong>DOB:</strong> 22 March 2000 (B.E. 2543) &nbsp;•&nbsp; <strong>Gender:</strong> Male</p>
-          <p><strong>Marital Status:</strong> Single &nbsp;•&nbsp; <strong>Military:</strong> Exempted / Completed ROTC</p>
-          <p><strong>Height/Weight:</strong> 183 cm / 85 kg &nbsp;•&nbsp; <strong>Transportation:</strong> Motorcycle</p>
-        </div>
-        <div class="section">
-          <h2>Job Preferences</h2>
-          <ul>
-            <li><strong>Desired Positions:</strong> 1) System Analyst (SA) 2) Full‑stack Programmer 3) Front‑end Programmer</li>
-            <li><strong>Employment:</strong> Full‑time</li>
-            <li><strong>Desired Salary:</strong> 60,000 THB / month</li>
-            <li><strong>Availability:</strong> Within 1 month</li>
-            <li><strong>Preferred Location:</strong> Bangkok, Thailand</li>
-          </ul>
-        </div>
-        <div class="section">
-          <h2>Languages</h2>
-          <ul>
-            <li><strong>Thai:</strong> Speaking/Reading/Writing — Good</li>
-            <li><strong>English:</strong> Speaking — Fair; Reading — Good; Writing — Good</li>
-            <li><strong>Lao:</strong> Speaking — Good; Reading — Good; Writing — Fair</li>
-          </ul>
-        </div>
-        <div class="section">
-          <h2>Education</h2>
-          <p><strong>B.Sc. in Computer Science</strong>, Faculty of Information Science, Mahasarakham University (2022) — GPA 2.60</p>
-        </div>
-      </aside>
-    </div>
-
-    <!-- Projects -->
-    <section id="projects" class="card" style="margin-top: var(--gap);">
-      <h2>Projects & Responsibilities</h2>
-
-      <div class="section">
-        <h3>BalueSea System <span class="badge">Back‑office</span></h3>
-        <div class="meta">Full‑stack · ASP.NET Core MVC/API, C#, LINQ, Bootstrap 4, jQuery, Jira/Trello</div>
-        <ul>
-          <li>Gathered requirements, designed wireframes/mockups, built MVC front‑end and API back‑end.</li>
-          <li>Implemented Unit & Integration testing; tracked metrics via spreadsheets.</li>
-          <li>Collected feedback and iterated for performance and UX improvements.</li>
-        </ul>
-      </div>
-
-      <div class="section">
-        <h3>Giftory Premium System <span class="badge">Rewards · LINE OA</span></h3>
-        <div class="meta">Front‑end · HTML, CSS, JS, jQuery, Bootstrap 4, Jira/Trello</div>
-        <ul>
-          <li>Designed front‑end structure based on provided UI for reward points features.</li>
-          <li>Managed workflow and delivery milestones using Jira/Trello.</li>
-        </ul>
-      </div>
-
-      <div class="section">
-        <h3>MyMenu System <span class="badge">QR Ordering</span></h3>
-        <div class="meta">Front‑end · Bootstrap 4, jQuery, Trello, Git</div>
-        <ul>
-          <li>Built responsive layouts for PC & tablet; streamlined restaurant ordering UX.</li>
-          <li>Managed tasks and source control with Trello & Git.</li>
-        </ul>
-      </div>
-
-      <div class="section">
-        <h3>myMaxx2 System <span class="badge">Invoicing & Orders</span></h3>
-        <div class="meta">Front‑end · Bootstrap 4, jQuery, Jira, Git</div>
-        <ul>
-          <li>Developed mobile/tablet‑optimized UI components for invoicing and order flows.</li>
-          <li>Tracked progress in Jira and maintained code in Git repositories.</li>
-        </ul>
-      </div>
-
-      <div class="section">
-        <h3>Line Report System <span class="badge">Monitoring · LINE OA</span></h3>
-        <div class="meta">Front‑end · Bootstrap 4, jQuery, Jira/Trello, Git</div>
-        <ul>
-          <li>Designed web interfaces for real‑time reporting integrated with LINE OA.</li>
-          <li>Handled milestones and code management with Jira/Trello & Git.</li>
-        </ul>
-      </div>
-
-      <div class="section">
-        <h3>Pasta 2 System <span class="badge">Restaurant</span></h3>
-        <div class="meta">Front‑end · Bootstrap 4, jQuery, Jira/Trello, Git</div>
-        <ul>
-          <li>Developed mobile‑first UI to support restaurant operations and quick actions.</li>
-          <li>Maintained version control and deployment consistency with Git.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills" class="card" style="margin-top: var(--gap);">
-      <h2>Technical Skills</h2>
-      <div class="section">
-        <strong>Frameworks:</strong>
-        <div class="skills">
-          <span class="badge">ASP.NET Core (MVC/API)</span>
-          <span class="badge">Nuxt3</span>
-          <span class="badge">Vue3</span>
-          <span class="badge">PrimeVue</span>
-          <span class="badge">Tailwind CSS</span>
-          <span class="badge">Bootstrap 4</span>
-        </div>
-      </div>
-      <div class="section">
-        <strong>Languages:</strong>
-        <div class="skills">
-          <span class="badge">C#</span>
-          <span class="badge">HTML</span>
-          <span class="badge">CSS</span>
-          <span class="badge">JavaScript</span>
-          <span class="badge">TypeScript</span>
-          <span class="badge">jQuery</span>
-          <span class="badge">LINQ</span>
-        </div>
-      </div>
-      <div class="section">
-        <strong>DevOps & Tools:</strong>
-        <div class="skills">
-          <span class="badge">Git</span>
-          <span class="badge">Jira</span>
-          <span class="badge">Trello</span>
-          <span class="badge">Ubuntu CLI</span>
-          <span class="badge">Bash</span>
-          <span class="badge">Google Cloud Platform</span>
-          <span class="badge">Google Analytics (GA4)</span>
-          <span class="badge">Basic SEO</span>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      © <span id="year"></span> Bunyakiat Suksamrong — Minimal Light Theme (Custom Palette)
-    </footer>
+  <!-- Language Switch -->
+  <div style="text-align:right;">
+    <button class="lang-btn active" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" onclick="setLang('th')">TH</button>
   </div>
 
+  <!-- Header -->
+  <div class="card">
+    <h1 data-en="Bunyakiat Suksamrong"
+        data-th="บุญญเกียรติ สุขสำราญ"></h1>
+
+    <p data-en="Fullstack Developer (Frontend-focused) with 4+ years experience in enterprise systems"
+       data-th="Fullstack Developer (เน้น Frontend) ประสบการณ์ 4+ ปี ในระบบองค์กร"></p>
+  </div>
+
+  <!-- About -->
+  <div class="card">
+    <h2 data-en="About Me" data-th="เกี่ยวกับฉัน"></h2>
+
+    <p data-en="I specialize in Vue3 / Nuxt3 and ASP.NET Core. I design scalable frontend architecture and build real business systems like POS and Back-office platforms."
+       data-th="เชี่ยวชาญ Vue3 / Nuxt3 และ ASP.NET Core เน้นออกแบบ Frontend ที่ scalable และพัฒนาระบบจริง เช่น POS และ Back-office"></p>
+  </div>
+
+  <!-- Skills -->
+  <div class="card">
+    <h2 data-en="Skills" data-th="ทักษะ"></h2>
+
+    <p><b>Frontend:</b> Vue3, Nuxt3, TypeScript</p>
+    <p><b>Backend:</b> ASP.NET Core (C#)</p>
+    <p><b>Tools:</b> Git, Jira, Trello</p>
+  </div>
+
+  <!-- Projects -->
+  <div class="card">
+    <h2 data-en="Projects" data-th="ผลงาน"></h2>
+
+    <!-- POS -->
+    <div class="project">
+      <h3>POS DAY System</h3>
+
+      <p data-en="Enterprise POS system used in real business operations."
+         data-th="ระบบ POS ใช้งานจริงในธุรกิจ"></p>
+
+      <ul>
+        <li data-en="Led frontend architecture design"
+            data-th="ออกแบบโครงสร้าง Frontend"></li>
+        <li data-en="Built multi-device UI (mobile / tablet / kiosk)"
+            data-th="รองรับหลายอุปกรณ์"></li>
+        <li data-en="Implemented printing system (receipt / kitchen)"
+            data-th="พัฒนาระบบพิมพ์ใบเสร็จ / ใบครัว"></li>
+      </ul>
+    </div>
+
+    <!-- BlueSea -->
+    <div class="project">
+      <h3>BlueSea System</h3>
+
+      <p data-en="Back-office enterprise system migrated from legacy platform."
+         data-th="ระบบ Back-office ย้ายจากระบบเก่า"></p>
+
+      <ul>
+        <li data-en="Fullstack development (Frontend + Backend)"
+            data-th="พัฒนาทั้ง Frontend และ Backend"></li>
+        <li data-en="Improved UX/UI and workflows"
+            data-th="ปรับปรุง UX/UI และ Workflow"></li>
+      </ul>
+    </div>
+
+    <!-- Other -->
+    <div class="project">
+      <h3 data-en="Other Systems"
+          data-th="ระบบอื่น ๆ"></h3>
+
+      <p data-en="Giftory, MyMenu, myMaxx2, Line Report, Pasta 2"
+         data-th="Giftory, MyMenu, myMaxx2, Line Report, Pasta 2"></p>
+
+      <ul>
+        <li data-en="Frontend development based on UX/UI"
+            data-th="พัฒนา Frontend ตาม UX/UI"></li>
+        <li data-en="Reusable structure for team development"
+            data-th="ออกแบบโครงสร้างให้ทีมใช้ต่อได้"></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Contact -->
+  <div class="card">
+    <h2 data-en="Contact" data-th="ติดต่อ"></h2>
+
+    <p>Email: bunyakiatsuksamrong@gmail.com</p>
+    <p>Phone: 095-2166-600</p>
+    <p>GitHub: github.com/bunyakiat178</p>
+  </div>
+
+</div>
+
 <script>
-  document.getElementById('year').textContent = new Date().getFullYear();
+function setLang(lang){
+  document.querySelectorAll("[data-en]").forEach(el=>{
+    el.innerText = el.getAttribute("data-" + lang);
+  });
+
+  document.querySelectorAll(".lang-btn").forEach(btn=>{
+    btn.classList.remove("active");
+  });
+
+  event.target.classList.add("active");
+}
+
+// default
+setLang('en');
 </script>
+
 </body>
 </html>
